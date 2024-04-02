@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SAfinalprojmaui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+
+            <Label
+                Text="Welcome to Village Rentals"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+
+
+            <Button
+                 x:Name="ManageEquipment"
+                 Text="Manage Equipment"
+                 SemanticProperties.Hint="switch to Manage Equipment page"
+                 Clicked="GoToEquipmentPage"
+                 HorizontalOptions="Center" 
+                TextColor="Tomato"
+                BackgroundColor="navy"/>
+
+            <Button
+                 x:Name="ManageCustomers"
+                 Text="Manage Customers"
+                 SemanticProperties.Hint="switch to Manage Customers  page"
+                 Clicked="GoToCustomersPage"
+                 HorizontalOptions="Center" 
+                TextColor="Tomato"
+                BackgroundColor="navy"/>
+
+            <Button
+                 x:Name="CreateRental"
+                 Text="Create Rental"
+                 SemanticProperties.Hint="switch to Create rental  page"
+                 Clicked="GoToRentalPage"
+                 HorizontalOptions="Center" 
+                TextColor="Tomato"
+                BackgroundColor="navy"/>
+
+            <Button
+                 x:Name="PrintReports"
+                 Text="Print Reports"
+                 SemanticProperties.Hint="switch to Create rental  page"
+                 Clicked="GoToPrintReportsPage"
+                 HorizontalOptions="Center" 
+                TextColor="Tomato"
+                BackgroundColor="navy"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
