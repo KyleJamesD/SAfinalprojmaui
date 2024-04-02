@@ -15,57 +15,53 @@
             VerticalOptions="Center" 
             HorizontalOptions="Start" />
 
-        <Grid ColumnSpacing="5" RowSpacing="10" RowDefinitions="50,50,50,50,50,50,50,50,50" ColumnDefinitions="400,400,400,*,*,*,*,*">
+        <Grid ColumnSpacing="5" RowSpacing="10" RowDefinitions="50,50,50,50,50,50,50,50,50" ColumnDefinitions="250,250,250,250">
         <!-- Buttons for entry of customer -->
         <!-- User input text field -->
 
-        <Entry x:Name="f_nameEntry" Placeholder="Enter Customer First Name" Grid.Row="0" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/> 
-        <!-- User input text field -->
-            <Entry x:Name="l_nameEntry" Placeholder="Enter Cusomter last Name" Grid.Row="1" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
-        <!-- User input text field -->
-            <Entry x:Name="phoneEntry" Placeholder="Enter Cusomter Phone Number" Grid.Row="2" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
-        <!-- User input text field -->
-            <Entry x:Name="emailEntry" Placeholder="Enter Cusomter email" Grid.Row="3" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+            <Entry x:Name="f_nameEntry" Placeholder="Enter Customer First Name" Grid.Row="0" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/> 
+            <Entry x:Name="l_nameEntry" Placeholder="Enter Cusomter last Name" Grid.Row="0" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+            <Entry x:Name="phoneEntry" Placeholder="Enter Cusomter Phone Number" Grid.Row="0" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+            <Entry x:Name="emailEntry" Placeholder="Enter Cusomter email" Grid.Row="0" Grid.Column="3" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
         <!-- Submit Button-->
-            <Button Text="Save New Customer" Clicked="CustomerEntrySubmit"  Grid.Row="4" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
-        
-        
-        <!-- Label to display the input -->
-            <Label x:Name="displayf_nameEntry" Text="First Name"  Grid.Row="5" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
-        <!-- Label to display the input -->
-            <Label x:Name="displayl_nameEntry" Text="Last Name"  Grid.Row="6" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
-        <!-- Label to display the input -->
-            <Label x:Name="displayphoneEntry" Text="Phone #"  Grid.Row="7" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
-        <!-- Label to display the input -->
-            <Label x:Name="displayemailEntry" Text="Email"  Grid.Row="8" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+            <Button Text="Save New Customer" Clicked="CustomerEntrySubmit"  Grid.Row="1" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+      
+        <!-- Label to display the saved input -->
+            <Label x:Name="displaycustomerEntry" Text=""  Grid.Row="2" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
         
         
         
-            <Label x:Name="row0_col1" Text="Email"  Grid.Row="0" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row1_col1" Text="Email"  Grid.Row="1" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row2_col1" Text="Email"  Grid.Row="2" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row3_col1" Text="Email"  Grid.Row="3" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row4_col1" Text="Search For Customer"  Grid.Row="4" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
-            <Label x:Name="row5_col1" Text="Email"  Grid.Row="5" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row0_col1" Text="Email"  Grid.Row="4" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row1_col1" Text="Email"  Grid.Row="4" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row2_col1" Text="Email"  Grid.Row="4" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row3_col1" Text="Email"  Grid.Row="4" Grid.Column="3" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row4_col1" Text="Search For Customer"  Grid.Row="5" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+            <Label x:Name="row5_col1" Text="Email"  Grid.Row="6" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
             <Label x:Name="row6_col1" Text="Email"  Grid.Row="6" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row7_col1" Text="Email"  Grid.Row="7" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row8_col1" Text="Email"  Grid.Row="8" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row7_col1" Text="Email"  Grid.Row="6" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row8_col1" Text="Email"  Grid.Row="6" Grid.Column="3" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
 
-            <Label x:Name="row0_col2" Text="Email"  Grid.Row="0" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row1_col2" Text="Email"  Grid.Row="1" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row2_col2" Text="Email"  Grid.Row="2" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row3_col2" Text="Email"  Grid.Row="3" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row4_col2" Text="Update Customer"  Grid.Row="4" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
-            <Label x:Name="row5_col2" Text="Email"  Grid.Row="5" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row6_col2" Text="Email"  Grid.Row="6" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row7_col2" Text="Email"  Grid.Row="7" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
-            <Label x:Name="row8_col2" Text="Email"  Grid.Row="8" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row0_col2" Text="Email"  Grid.Row="7" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row1_col2" Text="Email"  Grid.Row="7" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row2_col2" Text="Email"  Grid.Row="7" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row3_col2" Text="Email"  Grid.Row="7" Grid.Column="3" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row4_col2" Text="Update Customer"  Grid.Row="8" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+            <Label x:Name="row5_col2" Text="Email"  Grid.Row="9" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row6_col2" Text="Email"  Grid.Row="9" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row7_col2" Text="Email"  Grid.Row="9" Grid.Column="2" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="row8_col2" Text="Email"  Grid.Row="9" Grid.Column="3" TextColor="Black" FontSize="Small" BackgroundColor="Black"/>
 
         </Grid>
 
-
-
-
+      <!--  <Picker x:Name="customerPicker" Title="Select a Customer" Focused="Picker_Focused" /> -->
+        
+  
+        <Picker x:Name="customerPicker" Title="Select a Customer">
+            <Picker.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Picker_Focused"/>
+            </Picker.GestureRecognizers>
+        </Picker>
+        <Button Text="Update Customer List" Clicked="update_picker"  TextColor="Black" FontSize="Small" BackgroundColor="White"/>
 
     </VerticalStackLayout>
 </ContentPage>

@@ -12,59 +12,59 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SAfinalprojmaui
-build_property.ProjectDir = C:\Users\kyled\Desktop\SAfinalprojmaui\SAfinalprojmaui\
+build_property.ProjectDir = C:\Users\kyled\Desktop\Github\SAfinalprojmaui\SAfinalprojmaui\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/kyled/Desktop/SAfinalprojmaui/SAfinalprojmaui/App.xaml]
+[C:/Users/kyled/Desktop/Github/SAfinalprojmaui/SAfinalprojmaui/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/kyled/Desktop/SAfinalprojmaui/SAfinalprojmaui/AppShell.xaml]
+[C:/Users/kyled/Desktop/Github/SAfinalprojmaui/SAfinalprojmaui/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/kyled/Desktop/SAfinalprojmaui/SAfinalprojmaui/MainPage.xaml]
+[C:/Users/kyled/Desktop/Github/SAfinalprojmaui/SAfinalprojmaui/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/kyled/Desktop/SAfinalprojmaui/SAfinalprojmaui/Pages/CreateRental.xaml]
+[C:/Users/kyled/Desktop/Github/SAfinalprojmaui/SAfinalprojmaui/Pages/CreateRental.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.Pages.CreateRental.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\CreateRental.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\CreateRental.xaml
 
-[C:/Users/kyled/Desktop/SAfinalprojmaui/SAfinalprojmaui/Pages/ManageCustomers.xaml]
+[C:/Users/kyled/Desktop/Github/SAfinalprojmaui/SAfinalprojmaui/Pages/ManageCustomers.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.Pages.ManageCustomers.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\ManageCustomers.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\ManageCustomers.xaml
 
-[C:/Users/kyled/Desktop/SAfinalprojmaui/SAfinalprojmaui/Pages/ManageEquipment.xaml]
+[C:/Users/kyled/Desktop/Github/SAfinalprojmaui/SAfinalprojmaui/Pages/ManageEquipment.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.Pages.ManageEquipment.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\ManageEquipment.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\ManageEquipment.xaml
 
-[C:/Users/kyled/Desktop/SAfinalprojmaui/SAfinalprojmaui/Pages/PrintReports.xaml]
+[C:/Users/kyled/Desktop/Github/SAfinalprojmaui/SAfinalprojmaui/Pages/PrintReports.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.Pages.PrintReports.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\PrintReports.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\PrintReports.xaml
 
-[C:/Users/kyled/Desktop/SAfinalprojmaui/SAfinalprojmaui/Resources/Styles/Colors.xaml]
+[C:/Users/kyled/Desktop/Github/SAfinalprojmaui/SAfinalprojmaui/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/kyled/Desktop/SAfinalprojmaui/SAfinalprojmaui/Resources/Styles/Styles.xaml]
+[C:/Users/kyled/Desktop/Github/SAfinalprojmaui/SAfinalprojmaui/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
