@@ -16,15 +16,6 @@
 
 
             <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
-
-
-
-            <Button
                  x:Name="ManageEquipment"
                  Text="Manage Equipment"
                  SemanticProperties.Hint="switch to Manage Equipment page"
@@ -36,7 +27,7 @@
             <Button
                  x:Name="ManageCustomers"
                  Text="Manage Customers"
-                 SemanticProperties.Hint="switch to Manage Customers  page"
+                 SemanticProperties.Hint="switch to Manage Customers page"
                  Clicked="GoToCustomersPage"
                  HorizontalOptions="Center" 
                 TextColor="Tomato"
@@ -45,7 +36,7 @@
             <Button
                  x:Name="CreateRental"
                  Text="Create Rental"
-                 SemanticProperties.Hint="switch to Create rental  page"
+                 SemanticProperties.Hint="switch to Create rental page"
                  Clicked="GoToRentalPage"
                  HorizontalOptions="Center" 
                 TextColor="Tomato"
@@ -54,7 +45,7 @@
             <Button
                  x:Name="PrintReports"
                  Text="Print Reports"
-                 SemanticProperties.Hint="switch to Create rental  page"
+                 SemanticProperties.Hint="switch to Create rental page"
                  Clicked="GoToPrintReportsPage"
                  HorizontalOptions="Center" 
                 TextColor="Tomato"

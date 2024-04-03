@@ -52,3 +52,8 @@ CREATE TABLE IF NOT EXISTS `rental` (
   FOREIGN KEY (`customer_id`) REFERENCES `customers`(`customer_id`),
   FOREIGN KEY (`equip_id`) REFERENCES `equipment`(`equip_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+
+INSERT INTO equip_cate (cate_num,cate_desc) VALUES (10, 'Drills');
+INSERT INTO equip_cate (cate_num,cate_desc) VALUES (20, 'Saws');
+INSERT INTO equip_cate (cate_num,cate_desc) VALUES (30, 'Vacumns');
