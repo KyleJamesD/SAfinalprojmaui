@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SAfinalprojmaui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+1071f97ed29589e6c5a6dab6c9cb99b42cd8f1e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+53cac3dc6269f15f9dedd80da4352896180af43c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SAfinalprojmaui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SAfinalprojmaui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

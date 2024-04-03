@@ -1,6 +1,8 @@
 using MySqlConnector;
 namespace SAfinalprojmaui.Pages;
 
+
+//This Class holds all UI functionality
 public partial class ManageCustomers : ContentPage
 {
 
@@ -8,38 +10,52 @@ public partial class ManageCustomers : ContentPage
     {
         InitializeComponent();
     }
-    public void CustomerEntrySubmit(object sender, EventArgs e)
-    {
 
-    // Create a new instance of the MySQL connection string builder
-    var builder = new MySqlConnectionStringBuilder
-    {
-        Server = "localhost",
-        UserID = "root",
-        Password = "1234",
-        Database = "villagerentals1",
-    };
-    //create object of the MSQL string builder
-    DatabaseAccess dbAccess = new DatabaseAccess(builder);
+        // on button click method
+        public void Save_Cust_Button_Click(object sender, EventArgs e)
+        {
+            CustomerAdd();
+            update_picker();
+
+        }
+
+
+        public void CustomerAdd()
+        {
+            //DataBase Connection
+            // Create a new instance of the MySQL connection string builder
+            var builder = new MySqlConnectionStringBuilder
+            {
+                Server = "localhost",
+                UserID = "root",
+                Password = "1234",
+                Database = "villagerentals1",
+            };
+            DatabaseAccess dbAccess = new DatabaseAccess(builder);  //create object of the MSQL string builder
 
 
 
         // Get the text from the Entry
         string userInput1 = f_nameEntry.Text;
-        string userInput2 = l_nameEntry.Text;
-        int userInput3 = int.Parse(phoneEntry.Text);
-        string userInput4 = emailEntry.Text;
-        // Set the text of the Label to the user input
-        displaycustomerEntry.Text = $"{userInput1} has been Saved!";
+            string userInput2 = l_nameEntry.Text;
+            int userInput3 = int.Parse(phoneEntry.Text);
+            string userInput4 = emailEntry.Text;
 
+            // call method to insert new customer into custoemr table, pass along arguments from Entry fields
+            dbAccess.InsertRecordIfNotExists(userInput1, userInput2, userInput3, userInput4);
 
+            // CONFIRM CUSTOMER HAS BEEN SAVED
+            displaycustomerEntry.Text = $"{userInput1} has been Saved!";
+        }
+         
+        public void Load_Picker_Button_Click(object sender, EventArgs e) // on Button x:Name="load_customer_list" click Call these methods
+        {
+            update_picker();
+        }
 
-        dbAccess.InsertRecordIfNotExists(userInput1, userInput2, userInput3, userInput4);
-    }
-
-
-    public void PopulateCustomerPicker()
-    {
+        public void update_picker()         //Update the picker wheel Method
+        {
+        //DataBase Connection
         // Create a new instance of the MySQL connection string builder
         var builder = new MySqlConnectionStringBuilder
         {
@@ -48,22 +64,55 @@ public partial class ManageCustomers : ContentPage
             Password = "1234",
             Database = "villagerentals1",
         };
-        //create object of the MSQL string builder
-        DatabaseAccess dbAccess = new DatabaseAccess(builder);
+        DatabaseAccess dbAccess = new DatabaseAccess(builder);  //create object of the MSQL string builder
 
 
-        List<Customer> customers = dbAccess.FetchAllCustomers(); // Fetch the list of customers
-        customerPicker.ItemsSource = customers;
-        customerPicker.ItemDisplayBinding = new Binding("FullDetails"); // Ensure the picker displays the customer's full name
-    }
+            List<Customer> customers = dbAccess.FetchAllCustomers(); // Fetch the list of customers
+            // Set picker item source to list of customers
+            customerPicker.ItemsSource = customers;
+            //display the string line full detaisl from EACH object 
+            customerPicker.ItemDisplayBinding = new Binding("FullDetails");
+        }
 
-    public void Picker_Focused(object sender, EventArgs e)
-    {
-        PopulateCustomerPicker();
-    }
+        // on Button x:Name="del_button" click call these methods
+        public void Delete_Cust_Button_Click(object sender, EventArgs e)
+        {
+            CustomerDelete();
+            update_picker();
+        }
+
+        // Delete the Customer by ID
+        public void CustomerDelete()
+        {
+            //DataBase Connection
+            // Create a new instance of the MySQL connection string builder
+            var builder = new MySqlConnectionStringBuilder
+            {
+                Server = "localhost",
+                UserID = "root",
+                Password = "1234",
+                Database = "villagerentals1",
+            };
+            DatabaseAccess dbAccess = new DatabaseAccess(builder);  //create object of the MSQL string builder
+
+
+        // Get the text from the Entry
+        int userInput1 = int.Parse(del_entry.Text);
+
+            // call method to insert new customer into custoemr table, pass along arguments from Entry fields
+            dbAccess.DeleteRecordIfExists(userInput1);
+
+            // CONFIRM CUSTOMER HAS BEEN Deleted
+            displaycustomerEntry_del.Text = $"Customer:{userInput1} has been Deleted!";
+        }
+
 }
 
 
+
+
+
+//customer class to store customer objects to display in picker wheel
 public class Customer
 {
     public int CustomerId { get; set; }
@@ -78,6 +127,11 @@ public class Customer
 }
 
 
+
+
+
+
+// this class holds all methods for retrieving and deleting Database information
 public class DatabaseAccess
 {
     public MySqlConnectionStringBuilder BuilderString { get; set; }
@@ -87,7 +141,7 @@ public class DatabaseAccess
         BuilderString = builderString;
     }
 
-
+    // Saves new customers to the customer table
     public void InsertRecordIfNotExists(string f_name, string l_name, int phone_num, string email)
     {
         using (var connection = new MySqlConnection(BuilderString.ConnectionString))
@@ -112,47 +166,32 @@ public class DatabaseAccess
         }
     }
 
-    /*        public void PrintAllCustomers()
+    public void DeleteRecordIfExists(int customer_id)
+    {
+        using (var connection = new MySqlConnection(BuilderString.ConnectionString))
+        {
+            connection.Open();
+
+            string query = "Delete FROM customers WHERE customer_id = @customer_id"; using (var command = new MySqlCommand(query, connection))
             {
-                using (var connection = new MySqlConnection(BuilderString.ConnectionString))
+                command.Parameters.AddWithValue("@customer_id", customer_id);
+                int result = command.ExecuteNonQuery();
+                if (result < 0)
                 {
-                    try
-                    {
-                        connection.Open();
-
-                        string sql = "SELECT * FROM customers";
-
-                        MySqlCommand command = new MySqlCommand(sql, connection);
-                        MySqlDataReader reader = command.ExecuteReader();
-
-                        // Display retrieved data from the table
-                        while (reader.Read())
-                        {
-                            int customer_id = reader.GetInt32(0);
-                            string f_name = reader.GetString(1);
-                            string l_name = reader.GetString(2);
-                            int quantity = reader.GetInt32(3);
-                            string phone_num = reader.GetString(4);
-
-                        }
-
-                        connection.Close();
-                    }
-                    catch (MySqlException ex)
-                    {
-                        // Handle any exceptions that occur during database operations
-                        Console.WriteLine("Error: " + ex.Message);
-                    }
+                    Console.WriteLine("Error inserting data into the database.");
                 }
+
             }
 
+            connection.Close();
+        }
+    }
 
-        }*/
 
-
-
+    //retrieves all customers and adds them to a list, this list will be used by the picker wheels
     public List<Customer> FetchAllCustomers()
     {
+        
         List<Customer> customers = new List<Customer>();
 
         using (var connection = new MySqlConnection(BuilderString.ConnectionString))
