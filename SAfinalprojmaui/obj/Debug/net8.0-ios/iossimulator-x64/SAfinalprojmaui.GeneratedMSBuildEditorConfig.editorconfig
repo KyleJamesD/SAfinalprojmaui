@@ -40,6 +40,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.Pages.Crea
 build_metadata.AdditionalFiles.TargetPath = Pages\CreateRental.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\CreateRental.xaml
 
+[C:/Users/kyled/Desktop/Github/SAfinalprojmaui/SAfinalprojmaui/Pages/ManageCategories.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.Pages.ManageCategories.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ManageCategories.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ManageCategories.xaml
+
 [C:/Users/kyled/Desktop/Github/SAfinalprojmaui/SAfinalprojmaui/Pages/ManageCustomers.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SAfinalprojmaui.Pages.ManageCustomers.xaml

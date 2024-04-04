@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SAfinalprojmaui.Pages.ManageCustomers"
-             Title="ManageCustomers">
+             Title="Manage Customers">
     <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
@@ -18,8 +18,6 @@
         <!-- Picker wheel and Button to populate/update wheel items -->
         <Picker x:Name="customerPicker" Title="Click Here To Search for a Customer"></Picker>
 
-        <Button x:Name="load_customer_list"  Text="Load Customer List" Clicked="Load_Picker_Button_Click"  TextColor="Black" FontSize="Small" BackgroundColor="White" WidthRequest="400"/>
-
         <Grid ColumnSpacing="5" RowSpacing="10" RowDefinitions="50,50,50,50,50,50,50" ColumnDefinitions="250,250,250,250">
    
         <!-- Buttons for entry of customer -->
@@ -31,12 +29,12 @@
             <!-- Submit Button-->
             <Button Text="Save New Customer" Clicked="Save_Cust_Button_Click"  Grid.Row="1" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
             <!-- Label to display the saved input -->
-            <Label x:Name="displaycustomerEntry" Text="Saved Confirmation Display~"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="displaycustomerEntry" Text=""  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" FontSize="Small" />
 
 
             <Button x:Name="del_button" Text="Delete Customer" Clicked="Delete_Cust_Button_Click"  Grid.Row="4" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
             <Entry x:Name="del_entry" Placeholder="Enter Customer ID"  Grid.Row="4" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
-            <Label x:Name="displaycustomerEntry_del" Text="Delete Confirmation Display~"  Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" TextColor="White" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="displaycustomerEntry_del" Text=""  Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" TextColor="White" FontSize="Small"/>
         </Grid>
 
       <!--  <Picker x:Name="customerPicker" Title="Select a Customer" Focused="Picker_Focused" /> -->

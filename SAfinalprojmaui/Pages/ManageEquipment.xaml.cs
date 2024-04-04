@@ -9,14 +9,16 @@ public partial class ManageEquipment : ContentPage
 	public ManageEquipment()
 	{
 		InitializeComponent();
-	}
+        //call update_picker to upadte the list of equipment as soon as the page opens
+        update_Picker_Equipment();
+    }
 
 
     // on button click method
     public void Save_Equip_Button_Click(object sender, EventArgs e)
     {
         SaveEquipment();
-        update_picker();
+        update_Picker_Equipment();
 
     }
 
@@ -52,10 +54,10 @@ public partial class ManageEquipment : ContentPage
 
     public void Load_Picker_Button_Click(object sender, EventArgs e) // on Button x:Name="load_customer_list" click Call these methods
     {
-        update_picker();
+        update_Picker_Equipment();
     }
 
-    public void update_picker()         //Update the picker wheel Method
+    public void update_Picker_Equipment()         //Update the picker wheel Method
     {
         //DataBase Connection
         // Create a new instance of the MySQL connection string builder
@@ -81,7 +83,7 @@ public partial class ManageEquipment : ContentPage
     public void Delete_Equip_Button_Click(object sender, EventArgs e)
     {
         EquipmentDelete();
-        update_picker();
+        update_Picker_Equipment();
     }
 
     // Delete the Customer by ID

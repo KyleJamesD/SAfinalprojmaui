@@ -50,7 +50,7 @@ namespace SAfinalprojmaui
 
 
 
-    //customer class to store customer objects to display in Customer picker wheel
+    //Equipment class to store Equipment objects to display in Equipment picker wheel
     public class Equipment
     {
         public int EquipmentId { get; set; }
@@ -61,6 +61,20 @@ namespace SAfinalprojmaui
 
         // Read-only property to display all information
         public string FullDetails => $"ID: {EquipmentId}, Category: {Cate_Num} Equipment Name:{Equip_Name}, Daily Cost: ${Daily_Cost}, Description: {Equip_Description}";
+
+    }
+
+
+
+    //Equipment class to store Equipment objects to display in Equipment picker wheel
+    public class EquipmentCategories
+    {
+        public int Category_Number { get; set; }
+
+        public string Category_Description { get; set; }
+
+        // Read-only property to display all information
+        public string FullDetails => $"Category Number: {Category_Number} Description: {Category_Description}";
 
     }
 
@@ -85,7 +99,7 @@ namespace SAfinalprojmaui
 
 
         // Saves new customers to the customer table
-        public void InsertRecordIfNotExists(string f_name, string l_name, int phone_num, string email)
+        public void InsertCustomerIfNotExists(string f_name, string l_name, int phone_num, string email)
         {
             using (var connection = new MySqlConnection(BuilderString.ConnectionString))
             {
@@ -110,7 +124,7 @@ namespace SAfinalprojmaui
         }
 
         //Deletes Customer by their Customer ID, the PK
-        public void DeleteRecordIfExists(int customer_id)
+        public void DeleteCustomerIfExists(int customer_id)
         {
             using (var connection = new MySqlConnection(BuilderString.ConnectionString))
             {
@@ -189,6 +203,25 @@ namespace SAfinalprojmaui
             }
         }
 
+        //Deletes Equipment by its equipment_id primary Key
+        public void DeleteEquipmentIfExists(int equip_id)
+        {
+            using (var connection = new MySqlConnection(BuilderString.ConnectionString))
+            {
+                connection.Open();
+                string query = "Delete FROM equipment WHERE equip_id = @equip_id"; using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@equip_id", equip_id);
+                    int result = command.ExecuteNonQuery();
+                    if (result < 0)
+                    {
+                        Console.WriteLine("Error inserting data into the database.");
+                    }
+                }
+                connection.Close();
+            }
+        }
+
 
         //retrieves all Equipment and adds them to a list, this list will be used by the picker wheel
         public List<Equipment> FetchAllEquipment()
@@ -220,19 +253,51 @@ namespace SAfinalprojmaui
 
 
 
-        //Deletes Equipment by its equipment_id primary Key
-        public void DeleteEquipmentIfExists(int equip_id)
+
+
+
+
+
+        //************END EQUIPMENT METHODS*******************//
+
+
+        //************BEGIN EQUIPMENT CATEGORY METHODS*****************//
+
+        public void InsertCategoryIfNotExists(int cate_num, string cate_desc)
         {
             using (var connection = new MySqlConnection(BuilderString.ConnectionString))
             {
                 connection.Open();
-                string query = "Delete FROM equipment WHERE equip_id = @equip_id"; using (var command = new MySqlCommand(query, connection))
+
+                string query = "INSERT INTO equip_cate (cate_num, cate_desc) value (@cate_num, @cate_desc)"; using (var command = new MySqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@equip_id", equip_id);
+                    command.Parameters.AddWithValue("@cate_num", cate_num);
+                    command.Parameters.AddWithValue("@cate_desc", cate_desc);
                     int result = command.ExecuteNonQuery();
                     if (result < 0)
                     {
                         Console.WriteLine("Error inserting data into the database.");
+                    }
+
+                }
+
+                connection.Close();
+            }
+        }
+
+        //Deletes Category by their category  number , the PK
+        public void DeleteCategoryIfExists(int cate_num)
+        {
+            using (var connection = new MySqlConnection(BuilderString.ConnectionString))
+            {
+                connection.Open();
+                string query = "Delete FROM equip_cate WHERE cate_num = @cate_num"; using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@cate_num", cate_num);
+                    int result = command.ExecuteNonQuery();
+                    if (result < 0)
+                    {
+                        Console.WriteLine("Error Deleteing data into the database.");
                     }
                 }
                 connection.Close();
@@ -240,9 +305,36 @@ namespace SAfinalprojmaui
         }
 
 
+        //retrieves all categories and adds them to a list, this list will be used by the picker wheels
+        public List<EquipmentCategories> FetchAllCategories()
+        {
+            List<EquipmentCategories> equipmentCategories = new List<EquipmentCategories>();
+            using (var connection = new MySqlConnection(BuilderString.ConnectionString))
+            {
+                connection.Open();
+                string sql = "SELECT cate_num, cate_desc FROM equip_cate";
+                MySqlCommand command = new MySqlCommand(sql, connection);
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        equipmentCategories.Add(new EquipmentCategories
+                        {
+                            Category_Number = reader.GetInt32(0),
+                            Category_Description = reader.GetString(1),
+                        });
+                    }
+                }
+                connection.Close();
+            }
+            return equipmentCategories;
+        }
 
 
-        //************END EQUIPMENT METHODS*******************//
+        //************END EQUIPMENT CATEGORY METHODS*******************//
+
+
+
 
     }
 

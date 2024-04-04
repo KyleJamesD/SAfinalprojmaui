@@ -13,6 +13,20 @@ namespace SAfinalprojmaui
             InitializeComponent();
         }
 
+        private void GoToCustomersPage(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ManageCustomers());
+
+        }
+
+
+        private void GoToCategoriesPage(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ManageCategories());
+
+        }
+
+
 
         private void GoToRentalPage(object sender, EventArgs e)
         {
@@ -26,11 +40,7 @@ namespace SAfinalprojmaui
 
         }
 
-        private void GoToCustomersPage(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ManageCustomers());
 
-        }
 
         private void GoToPrintReportsPage(object sender, EventArgs e)
         {

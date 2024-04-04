@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SAfinalprojmaui.Pages.ManageCategories"
+             Title="Manage Categories">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+
+
+
+        <Label 
+            Text="Manage Customers"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"/>
+
+        <!-- Picker wheel and Button to populate/update wheel items -->
+        <Picker x:Name="customerPicker" Title="Click Here To Search for a Customer"></Picker>
+
+        <Grid ColumnSpacing="5" RowSpacing="10" RowDefinitions="50,50,50,50,50,50,50" ColumnDefinitions="350,350,250,250">
+
+            <!-- Buttons for entry of customer -->
+            <!-- User input text field -->
+            <Entry x:Name="category_num_entry" Placeholder="Enter New Category Number" Grid.Row="0" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+            <Entry x:Name="category_description_entry" Placeholder="Enter Category Description" Grid.Row="0" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+
+            <!-- Submit Button-->
+            <Button Text="Save New Category" Clicked="Save_Cate_Button_Click"  Grid.Row="1" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+            <!-- Label to display the saved input -->
+            <Label x:Name="displaycategoryEntry" Text=""  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" FontSize="Small" />
+
+
+            <Button x:Name="del_category_button" Text="Delete Category" Clicked="Delete_Cate_Button_Click"  Grid.Row="4" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+            <Entry x:Name="del_category_entry" Placeholder="Enter Category ID"  Grid.Row="4" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
+            <Label x:Name="displaycategoryEntry_del" Text=""  Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" TextColor="White" FontSize="Small"/>
+        </Grid>
+
+        <!--  <Picker x:Name="customerPicker" Title="Select a Customer" Focused="Picker_Focused" /> -->
+
+
+
+
+
+
+
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

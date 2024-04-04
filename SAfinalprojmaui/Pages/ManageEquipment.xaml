@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SAfinalprojmaui.Pages.ManageEquipment"
-             Title="ManageEquipment">
+             Title="Manage Equipment">
     <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
@@ -19,7 +19,7 @@
         <!-- Picker wheel and Button to populate/update wheel items -->
         <Picker x:Name="EquipmentPicker" Title="Click Here To Search for a Piece of Equipment"></Picker>
 
-        <Button x:Name="load_equipment_list"  Text="Load Equipment List" Clicked="Load_Picker_Button_Click"  TextColor="Black" FontSize="Small" BackgroundColor="White" WidthRequest="400"/>
+
 
         <Grid ColumnSpacing="5" RowSpacing="10" RowDefinitions="50,50,50,50,50,50,50" ColumnDefinitions="250,250,250,250">
 
@@ -32,12 +32,12 @@
             <!-- Submit Button-->
             <Button Text="Save New Equipment" Clicked="Save_Equip_Button_Click"  Grid.Row="1" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
             <!-- Label to display the saved input -->
-            <Label x:Name="DisplayEquipmentEntry" Text="Saved Confirmation Display~"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="DisplayEquipmentEntry" Text=""  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" FontSize="Small"/>
 
 
             <Button x:Name="del_button" Text="Delete Equipment" Clicked="Delete_Equip_Button_Click"  Grid.Row="4" Grid.Column="0" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
             <Entry x:Name="del_entry" Placeholder="Enter Equipment ID"  Grid.Row="4" Grid.Column="1" TextColor="Black" FontSize="Small" BackgroundColor="White"/>
-            <Label x:Name="DisplayEquipmentEntry_del" Text="Delete Confirmation Display~"  Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" TextColor="White" FontSize="Small" BackgroundColor="Black"/>
+            <Label x:Name="DisplayEquipmentEntry_del" Text=""  Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" TextColor="White" FontSize="Small"/>
         </Grid>
 
         <!--  <Picker x:Name="customerPicker" Title="Select a Customer" Focused="Picker_Focused" /> -->

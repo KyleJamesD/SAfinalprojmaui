@@ -54,6 +54,21 @@ CREATE TABLE IF NOT EXISTS `rental` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 
-INSERT INTO equip_cate (cate_num,cate_desc) VALUES (10, 'Drills');
-INSERT INTO equip_cate (cate_num,cate_desc) VALUES (20, 'Saws');
-INSERT INTO equip_cate (cate_num,cate_desc) VALUES (30, 'Vacumns');
+USE `villagerentals1`;
+-- Table for equipment
+CREATE TABLE IF NOT EXISTS `equipment_rented` (
+  `equip_id` INT,
+  `rental_id` INT,
+  PRIMARY KEY (`equip_id`,`rental_id`),
+  FOREIGN KEY (`equip_id`) REFERENCES `equipment`(`equip_id`),
+  FOREIGN KEY (`rental_id`) REFERENCES `rental`(`rental_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+
+
+
+INSERT INTO equip_cate (cate_num,cate_desc) VALUES (10, 'Power tools');
+INSERT INTO equip_cate (cate_num,cate_desc) VALUES (20, 'Yard Equipment');
+INSERT INTO equip_cate (cate_num,cate_desc) VALUES (30, 'Compressors');
+INSERT INTO equip_cate (cate_num,cate_desc) VALUES (40, 'Generators');
+INSERT INTO equip_cate (cate_num,cate_desc) VALUES (50, 'Air tools');

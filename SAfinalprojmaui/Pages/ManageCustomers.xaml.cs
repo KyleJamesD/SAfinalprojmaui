@@ -9,13 +9,16 @@ public partial class ManageCustomers : ContentPage
     public ManageCustomers()
     {
         InitializeComponent();
+        //call the update_picker() function as soonn as page loads to populate the picker wheel
+        update_Picker_Customer();
     }
 
         // on button click method
         public void Save_Cust_Button_Click(object sender, EventArgs e)
         {
             CustomerAdd();
-            update_picker();
+
+            update_Picker_Customer();
 
         }
 
@@ -43,18 +46,14 @@ public partial class ManageCustomers : ContentPage
 
         // call method to insert new customer into custoemr table, pass along arguments from Entry fields
         //Methods that read/write from DB must be in DB class and called with DB object
-        dbAccess.InsertRecordIfNotExists(userInput1, userInput2, userInput3, userInput4);
+        dbAccess.InsertCustomerIfNotExists(userInput1, userInput2, userInput3, userInput4);
 
             // CONFIRM CUSTOMER HAS BEEN SAVED
             displaycustomerEntry.Text = $"{userInput1} has been Saved!";
         }
          
-        public void Load_Picker_Button_Click(object sender, EventArgs e) // on Button x:Name="load_customer_list" click Call these methods
-        {
-            update_picker();
-        }
 
-        public void update_picker()         //Update the picker wheel Method
+        public void update_Picker_Customer()         //Update the picker wheel Method
         {
         //DataBase Connection
         // Create a new instance of the MySQL connection string builder
@@ -79,7 +78,7 @@ public partial class ManageCustomers : ContentPage
         public void Delete_Cust_Button_Click(object sender, EventArgs e)
         {
             CustomerDelete();
-            update_picker();
+            update_Picker_Customer();
         }
 
         // Delete the Customer by ID
@@ -102,7 +101,7 @@ public partial class ManageCustomers : ContentPage
 
             // call method to insert new customer into custoemr table, pass along arguments from Entry fields
             //Methods that read/write from DB must be in DB class and called with DB object
-            dbAccess.DeleteRecordIfExists(userInput1);
+            dbAccess.DeleteCustomerIfExists(userInput1);
 
             // CONFIRM CUSTOMER HAS BEEN Deleted
             displaycustomerEntry_del.Text = $"Customer:{userInput1} has been Deleted!";

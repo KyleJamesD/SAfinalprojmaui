@@ -16,6 +16,16 @@
 
 
             <Button
+                 x:Name="ManageCustomers"
+                 Text="Manage Customers"
+                 SemanticProperties.Hint="switch to Manage Customers page"
+                 Clicked="GoToCustomersPage"
+                 HorizontalOptions="Center" 
+                TextColor="Tomato"
+                BackgroundColor="navy"/>
+
+
+            <Button
                  x:Name="ManageEquipment"
                  Text="Manage Equipment"
                  SemanticProperties.Hint="switch to Manage Equipment page"
@@ -25,13 +35,15 @@
                 BackgroundColor="navy"/>
 
             <Button
-                 x:Name="ManageCustomers"
-                 Text="Manage Customers"
-                 SemanticProperties.Hint="switch to Manage Customers page"
-                 Clicked="GoToCustomersPage"
+                 x:Name="ManageCategories"
+                 Text="Manage Equipment Categories"
+                 SemanticProperties.Hint="switch to Manage Categories page"
+                 Clicked="GoToCategoriesPage"
                  HorizontalOptions="Center" 
                 TextColor="Tomato"
                 BackgroundColor="navy"/>
+
+
 
             <Button
                  x:Name="CreateRental"
@@ -45,7 +57,7 @@
             <Button
                  x:Name="PrintReports"
                  Text="Print Reports"
-                 SemanticProperties.Hint="switch to Create rental page"
+                 SemanticProperties.Hint="switch to Print report page"
                  Clicked="GoToPrintReportsPage"
                  HorizontalOptions="Center" 
                 TextColor="Tomato"
