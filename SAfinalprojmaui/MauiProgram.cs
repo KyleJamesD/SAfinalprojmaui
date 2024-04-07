@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Controls;
 using MySqlConnector;
 
 namespace SAfinalprojmaui
@@ -66,7 +67,7 @@ namespace SAfinalprojmaui
 
 
 
-    //Equipment class to store Equipment objects to display in Equipment picker wheel
+    //Equipment Categories to store in database
     public class EquipmentCategories
     {
         public int Category_Number { get; set; }
@@ -335,16 +336,69 @@ namespace SAfinalprojmaui
 
 
 
+        //************BEGIN RENTAL CATEGORY METHODS*****************//
+
+        public void InsertRentalIfNotExists(int customer_id, int equip_id, DateTime current_date_today, DateTime rental_date, DateTime return_date, int rental_cost)
+        {
+            using (var connection = new MySqlConnection(BuilderString.ConnectionString))
+            {
+                connection.Open();
+
+                string query = "INSERT INTO rental (customer_id, equip_id, current_date_today, rental_date, return_date, rental_cost) value (@customer_id, @equip_id, @current_date_today, @rental_date, @return_date, @rental_cost)"; using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@customer_id", customer_id);
+                    command.Parameters.AddWithValue("@equip_id", equip_id);
+                    command.Parameters.AddWithValue("@current_date_today", current_date_today);
+                    command.Parameters.AddWithValue("@rental_date", rental_date);
+                    command.Parameters.AddWithValue("@return_date", return_date);
+                    command.Parameters.AddWithValue("@rental_cost", rental_cost);
+                    int result = command.ExecuteNonQuery();
+                    if (result < 0)
+                    {
+                        Console.WriteLine("Error inserting data into the database.");
+                    }
+
+
+                }
+
+                // selects the last AUTO-INCREMENT so we can add rental_id and equipment_id to the bridging table.
+                string retrieveIdQuery = "SELECT LAST_INSERT_ID();";
+                //unfortunately the select last auto increment features works on a obhect and not an INT(int 32) and the execute scalar returns and in 64 from that object. you must set your renetal_id to a long to hold the int 64
+                //What SELECT LAST_INSERT_ID() Returns: The LAST_INSERT_ID() function in MySQL (and MariaDB, by extension) returns the most recently generated AUTO_INCREMENT value in the current session. This value is returned as a 64-bit unsigned integer (UNSIGNED BIGINT in SQL terms), which corresponds to UInt64 in .NET data types. This is because AUTO_INCREMENT columns can be of types up to BIGINT, and the function is designed to return values that can accommodate the full range of possible AUTO_INCREMENT values.
+                //Data Type Conversion: When you execute SELECT LAST_INSERT_ID(); via ExecuteScalar(), the return value is an object. For .NET to handle this value in a typed manner, it needs to be converted or cast to a specific data type. In this case, since the value could potentially be larger than what fits in a 32-bit integer (Int32), you convert it to Int64 (a long in C#), which can safely hold any value LAST_INSERT_ID() might return
+                //Storing in a long Variable: By using Convert.ToInt64(command.ExecuteScalar());, you're converting the returned object to a long (Int64), ensuring compatibility with the size of the data returned by LAST_INSERT_ID(). This is correct and necessary because trying to store the value directly in an int (Int32) without checking its size could lead to an OverflowException if the value exceeds what an int can store.
+                long rental_id;
+                using (var command = new MySqlCommand(retrieveIdQuery, connection))
+                {
+                    rental_id = Convert.ToInt64(command.ExecuteScalar());
+                }
+
+                // Now you have the `rentalId`, you can insert into the bridging table
+                string insertBridgingTableQuery = "INSERT INTO equipment_rented (rental_id, equip_id) VALUES (@rental_id, @equip_id);"; using (var command = new MySqlCommand(insertBridgingTableQuery, connection))
+                // Prepare and execute the insert for the bridging table as needed, using `rentalId`
+                {
+                    command.Parameters.AddWithValue("@rental_id", rental_id);
+                    command.Parameters.AddWithValue("@equip_id", equip_id);
+                    int result = command.ExecuteNonQuery();
+                    if (result < 0)
+                    {
+                        Console.WriteLine("Error inserting data into the database.");
+                    }
+                }
+
+
+                    connection.Close();
+
+
+            }
+
+
+
+        }
+
+        //************END RENTAL CATEGORY METHODS*******************//
+
 
     }
-
-
-
-
-
-
-
-
-
 
 }

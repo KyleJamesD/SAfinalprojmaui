@@ -12,9 +12,8 @@
 
 
         <!-- Picker wheel and Button to populate/update wheel items -->
-        <Picker x:Name="customerPicker" Title="Click Here To Add the Customer"></Picker>
-        <Picker x:Name="EquipmentPicker" Title="Click Here To Add a piece of Equipment"></Picker>
-
+        <Picker x:Name="customerPicker" Title="Click Here To Add the Customer" SelectedIndexChanged="CustomerPicker_SelectedIndexChanged"></Picker>
+        <Picker x:Name="EquipmentPicker" Title="Click Here To Add a piece of Equipment" SelectedIndexChanged="EquipmentPicker_SelectedIndexChanged"></Picker>
 
 
 
@@ -27,15 +26,13 @@
         <HorizontalStackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="10" Margin="0,0,0,50">
             <Label x:Name="rental_return_date" Text="Select Return Date"  TextColor="White" FontSize="Small" WidthRequest="200" />
             <DatePicker x:Name="returnDatePicker"/>
-            <Button x:Name="calculateCostButton" Text="Calculate Cost" Clicked="OnCalculateCostClicked" />
+            <Button x:Name="calculateCostButton" Text="Calculate Cost" Clicked="OnCalculateCostClicked" Margin="25,0,0,0"/>
             <!-- for the label to give padded  edges-->
-
-
-            <Label x:Name="label_rental_cost" Text="" BackgroundColor="Black" TextColor="White"  WidthRequest="200" />
-                
-
-            
+            <Label x:Name="label_rental_cost" Text=""  FontSize="Medium" TextColor="White"  WidthRequest="200" Margin="25,0,0,0"/>
         </HorizontalStackLayout>
-
+        <HorizontalStackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="10" Margin="0,0,0,50">
+        <Button x:Name="CreateRentalButton" HorizontalOptions="StartAndExpand" Text="Create Rental" Clicked="OnCreateRentalClicked" Margin="50,0,0,50" WidthRequest="400"/>
+        <Label x:Name="Display_Rental_Save" Text="" FontSize="Medium"  Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" TextColor="White" />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

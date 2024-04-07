@@ -16,9 +16,12 @@ public partial class CreateRental : ContentPage
         StartDate = DateTime.Today;
         startDatePicker.Date = DateTime.Today;
 
+
     }
 
 
+
+    DateTime current_date_today = DateTime.Today;
 
 
 
@@ -87,7 +90,7 @@ public partial class CreateRental : ContentPage
     {
         int cost = CalculateCost();
         // Display or use the calculated cost
-        label_rental_cost.Text = cost.ToString(); // Format as currency, if appropriate
+        label_rental_cost.Text = $"${cost.ToString()}"; 
     }
 
 
@@ -96,7 +99,7 @@ public partial class CreateRental : ContentPage
 
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
-    public int DailyRate { get; set; } = 10; // This is your daily rental rate
+    public int DailyRate { get; set; } // This is your daily rental rate
 
     public int CalculateCost()
     {
@@ -105,6 +108,9 @@ public partial class CreateRental : ContentPage
 
         // If you want to charge for at least one day even if the item is returned the same day
 
+        //get object from equipment picker wheel
+        Equipment selectedEquipment = (Equipment)EquipmentPicker.SelectedItem;
+        DailyRate = selectedEquipment.Daily_Cost;
 
         return totalDays * DailyRate;
     }
@@ -113,5 +119,80 @@ public partial class CreateRental : ContentPage
 
 
 
+    private void OnCreateRentalClicked(object sender, EventArgs e)
+    {
+        SaveRental();
+    }
+
+
+    public void SaveRental()
+    {
+        //DataBase Connection
+        // Create a new instance of the MySQL connection string builder
+        var builder = new MySqlConnectionStringBuilder
+        {
+            Server = "localhost",
+            UserID = "root",
+            Password = "1234",
+            Database = "villagerentals1",
+        };
+        DatabaseAccess dbAccess = new DatabaseAccess(builder);  //create object of the MSQL string builder'
+
+
+        Equipment selectedEquipment = (Equipment)EquipmentPicker.SelectedItem;
+        Customer selectedCustomer = (Customer)customerPicker.SelectedItem;
+
+
+        // Get the text from the Entry
+        int customer_id = selectedCustomerId;
+        int equip_id = selectedEquipmentId;
+        //declared publicy above so do not need?
+        //DateTime current_date_today = current_date_today;
+        DateTime rental_date = StartDate;
+        DateTime return_date = EndDate;
+        int rental_cost = DailyRate;
+
+        dbAccess.InsertRentalIfNotExists(customer_id, equip_id, current_date_today, rental_date, return_date, rental_cost);
+
+
+
+        // CONFIRM RENTAL HAS BEEN SAVED
+        Display_Rental_Save.Text = $"{selectedCustomer.FirstName} rental of equipment {selectedEquipment.Equip_Name} has been Saved!";
+    }
+
+
+
+    private int selectedCustomerId = -1; // Variable to store selected Customer's ID
+    //When Customer is selected in picker , select 
+    private void CustomerPicker_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        // Check if the picker selection is valid
+        if (customerPicker.SelectedIndex != -1)
+        {
+            //store selected customer Object in variable
+            Customer selectedCustomer = (Customer)customerPicker.SelectedItem;
+            // Store the Customer ID in the variable
+            //Store object variable Customer_num in selectedCustomerId
+            selectedCustomerId = selectedCustomer.CustomerId;
+
+        }
+    }
+
+
+    private int selectedEquipmentId = -1; // Variable to store selected Customer's ID
+    //When Customer is selected in picker , select 
+    private void EquipmentPicker_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        // Check if the picker selection is valid
+        if (customerPicker.SelectedIndex != -1)
+        {
+            //store selected customer Object in variable
+            Equipment selectedEquipment = (Equipment)EquipmentPicker.SelectedItem;
+            // Store the Customer ID in the variable
+            //Store object variable Customer_num in selectedCustomerId
+            selectedEquipmentId = selectedEquipment.EquipmentId;
+
+        }
+    }
 
 }

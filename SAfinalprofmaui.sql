@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `rental` (
   `rental_id` INT AUTO_INCREMENT,
   `customer_id` INT,
   `equip_id` INT, -- Added this line to include equipment
-  `current_date` DATETIME,
+  `current_date_today` DATETIME,
   `rental_date` DATETIME,
   `return_date` DATETIME,
   `rental_cost` INT(10),
