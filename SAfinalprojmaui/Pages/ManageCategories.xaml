@@ -5,21 +5,20 @@
              Title="Manage Categories">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text=""
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
 
 
-
-
         <Label 
-            Text="Manage Customers"
+            Text="Manage Equipment Categories"
             VerticalOptions="Center" 
             HorizontalOptions="Start"/>
 
         <!-- Picker wheel and Button to populate/update wheel items -->
-        <Picker x:Name="customerPicker" Title="Click Here To Search for a Customer"></Picker>
+        <Picker x:Name="CategoryPicker" Title="Click Here To Search for a Piece of Equipment"></Picker>
+
 
         <Grid ColumnSpacing="5" RowSpacing="10" RowDefinitions="50,50,50,50,50,50,50" ColumnDefinitions="350,350,250,250">
 

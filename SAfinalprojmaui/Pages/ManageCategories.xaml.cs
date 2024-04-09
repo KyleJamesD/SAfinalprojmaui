@@ -69,9 +69,9 @@ public partial class ManageCategories : ContentPage
         //Methods that read/write from DB must be in DB class and called with DB object
         List<EquipmentCategories> equipmentCategories = dbAccess.FetchAllCategories(); // Fetch the list of customers
                                                                  // Set picker item source to list of customers
-        customerPicker.ItemsSource = equipmentCategories;
+        CategoryPicker.ItemsSource = equipmentCategories;
         //display the string line full detaisl from EACH object 
-        customerPicker.ItemDisplayBinding = new Binding("FullDetails");
+        CategoryPicker.ItemDisplayBinding = new Binding("FullDetails");
     }
 
     //button
