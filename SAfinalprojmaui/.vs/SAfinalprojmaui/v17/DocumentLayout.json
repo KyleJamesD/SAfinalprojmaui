@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\pages\\managecategories.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|c:\\users\\kyled\\desktop\\github\\safinalprojmaui\\safinalprojmaui\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|c:\\users\\kyled\\desktop\\github\\safinalprojmaui\\safinalprojmaui\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|c:\\users\\kyled\\desktop\\github\\safinalprojmaui\\safinalprojmaui\\pages\\managecategories.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|solutionrelative:pages\\managecategories.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|c:\\users\\kyled\\desktop\\github\\safinalprojmaui\\safinalprojmaui\\pages\\managecategories.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\pages\\managecategories.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|solutionrelative:pages\\managecategories.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -19,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|solutionrelative:pages\\manageequipment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|c:\\users\\kyled\\desktop\\github\\safinalprojmaui\\safinalprojmaui\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E22380DA-03DC-40BC-B6B2-0C199D9525CC}|SAfinalprojmaui.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -54,11 +62,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MainPage.xaml",
+              "ToolTip": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAEcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-16T23:54:59.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\MainPage.xaml.cs",
+              "RelativeToolTip": "MainPage.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T23:54:54.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManageCategories.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\ManageCategories.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\ManageCategories.xaml.cs",
+              "ToolTip": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\ManageCategories.xaml.cs",
+              "RelativeToolTip": "Pages\\ManageCategories.xaml.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAgwEUAAAB1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T16:27:06.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CreateRental.xaml.cs",
               "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\CreateRental.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\CreateRental.xaml.cs",
@@ -70,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ManageEquipment.xaml",
               "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\ManageEquipment.xaml",
               "RelativeDocumentMoniker": "Pages\\ManageEquipment.xaml",
@@ -78,12 +125,11 @@
               "RelativeToolTip": "Pages\\ManageEquipment.xaml",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-06T20:46:42.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-06T20:46:42.971Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ManageEquipment.xaml.cs",
               "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\ManageEquipment.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\ManageEquipment.xaml.cs",
@@ -91,12 +137,11 @@
               "RelativeToolTip": "Pages\\ManageEquipment.xaml.cs",
               "ViewState": "AQIAAEsAAAAAAAAAAAAowDQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T18:06:56.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-04T18:06:56.674Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MauiProgram.cs",
@@ -104,12 +149,11 @@
               "RelativeToolTip": "MauiProgram.cs",
               "ViewState": "AQIAAPsAAAAAAAAAAAAqwAEBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T17:38:57.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-04T17:38:57.834Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ManageCategories.xaml",
               "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\ManageCategories.xaml",
               "RelativeDocumentMoniker": "Pages\\ManageCategories.xaml",
@@ -117,25 +161,11 @@
               "RelativeToolTip": "Pages\\ManageCategories.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-09T15:35:47.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-09T15:35:47.695Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ManageCategories.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\ManageCategories.xaml.cs",
-              "RelativeDocumentMoniker": "Pages\\ManageCategories.xaml.cs",
-              "ToolTip": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\ManageCategories.xaml.cs",
-              "RelativeToolTip": "Pages\\ManageCategories.xaml.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAIwEsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T16:27:06.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "CreateRental.xaml",
               "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\CreateRental.xaml",
               "RelativeDocumentMoniker": "Pages\\CreateRental.xaml",
@@ -147,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "PrintReports.xaml",
               "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\PrintReports.xaml",
               "RelativeDocumentMoniker": "Pages\\PrintReports.xaml",
@@ -155,11 +185,12 @@
               "RelativeToolTip": "Pages\\PrintReports.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-07T17:47:58.814Z"
+              "WhenOpened": "2024-04-07T17:47:58.814Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "PrintReports.xaml.cs",
               "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\PrintReports.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\PrintReports.xaml.cs",
@@ -171,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ManageCustomers.xaml",
               "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\ManageCustomers.xaml",
               "RelativeDocumentMoniker": "Pages\\ManageCustomers.xaml",
@@ -183,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ManageCustomers.xaml.cs",
               "DocumentMoniker": "C:\\Users\\kyled\\Desktop\\Github\\SAfinalprojmaui\\SAfinalprojmaui\\Pages\\ManageCustomers.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\ManageCustomers.xaml.cs",
